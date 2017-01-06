@@ -19,7 +19,7 @@ describe('server!', function(){
       this.takeScreenshot = () => {
         return this.browser.takeScreenshot()
         .then(function(image, error) {
-          const fileName = 'screenshot' + new Date().valueOf() + '.png'
+          const fileName = __dirname + '/artifacts/' + new Date().valueOf() + '.png'
           console.log(fileName)
           fs.writeFile(fileName, image, 'base64', function(error){
             if (error) throw error
