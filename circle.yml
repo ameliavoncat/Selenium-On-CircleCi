@@ -1,0 +1,7 @@
+machine:
+  pre:
+    - mkdir ~/.yarn-cache
+  node:
+    version: 7.0.0
+  environment:
+    NODE_ENV: test
